@@ -8,8 +8,11 @@ import org.testng.annotations.Test;
 
 import com.bankingproject.base.BaseClass;
 
-public class LoginPage extends BaseClass{
+import com.bankingproject.pom.loginPagePom;
+
+public class LoginPageTest extends BaseClass{
 	
+	loginPagePom lp;
 	@BeforeClass
 	public void setup() {
 		LaunchWebsite();
@@ -39,6 +42,22 @@ public class LoginPage extends BaseClass{
 			
 			System.out.println("we are no worng path");
 		}
+	}
+	@Test
+	public void ClickonLoginButton() {
+		loginPagePom lp =new loginPagePom();
+		lp.ClickonLoginButton();
+	}
+	@Test
+	public void UserID() throws InterruptedException {
+		loginPagePom lp =new loginPagePom();
+		lp.UserID();
+		Thread.sleep(2000);
+	}
+	@Test
+	public void clickOnHere() {
+		loginPagePom lp =new loginPagePom();
+		lp.clickOnHere();
 	}
 	}
 	
